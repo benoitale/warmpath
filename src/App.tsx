@@ -47,6 +47,15 @@ export function App() {
       {tab === 'search' ? (
         <div className="space-y-4">
           <AccountSearch graph={graph} onSelectCompany={setFocusCompanyId} />
+          {focusCompanyId !== null && (
+            <div>
+              <h2 className="mb-2 text-sm font-medium text-gray-700">
+                Connections around{' '}
+                {graph.nodes.find((node) => node.id === focusCompanyId)?.name ?? focusCompanyId}
+              </h2>
+              <GraphView graph={graph} focusCompanyId={focusCompanyId} />
+            </div>
+          )}
           {paths.map((path) => (
             <PathCard key={path.steps.map((step) => step.edge.id).join('|')} path={path} graph={graph} />
           ))}
