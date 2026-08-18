@@ -2,18 +2,30 @@
   "version": "0.1.0",
   "generated_at": "2026-08-12T17:30:00Z",
   "nodes": [
-    { "id": "fund:sequoia-capital", "type": "fund", "name": "Sequoia Capital", "aliases": ["Sequoia"] },
+    {
+      "id": "fund:sequoia-capital",
+      "type": "fund",
+      "name": "Sequoia Capital",
+      "aliases": [
+        "Sequoia"
+      ]
+    },
     {
       "id": "fund:andreessen-horowitz",
       "type": "fund",
       "name": "Andreessen Horowitz",
-      "aliases": ["a16z", "AH Capital Management"]
+      "aliases": [
+        "a16z",
+        "AH Capital Management"
+      ]
     },
     {
       "id": "company:stripe",
       "type": "company",
       "name": "Stripe",
-      "aliases": ["Stripe, Inc."],
+      "aliases": [
+        "Stripe, Inc."
+      ],
       "is_target": true,
       "is_customer": false,
       "tier": 1,
@@ -24,7 +36,9 @@
       "id": "company:airbnb",
       "type": "company",
       "name": "Airbnb",
-      "aliases": ["Airbnb, Inc."],
+      "aliases": [
+        "Airbnb, Inc."
+      ],
       "is_target": true,
       "is_customer": false,
       "tier": 1,
@@ -35,7 +49,9 @@
       "id": "company:instacart",
       "type": "company",
       "name": "Instacart",
-      "aliases": ["Maplebear Inc."],
+      "aliases": [
+        "Maplebear Inc."
+      ],
       "is_target": false,
       "is_customer": true,
       "tier": 2,
@@ -46,7 +62,10 @@
       "id": "company:meta",
       "type": "company",
       "name": "Meta",
-      "aliases": ["Meta Platforms", "Facebook"],
+      "aliases": [
+        "Meta Platforms",
+        "Facebook"
+      ],
       "is_target": true,
       "is_customer": false,
       "tier": 1,
@@ -57,7 +76,9 @@
       "id": "company:shopify",
       "type": "company",
       "name": "Shopify",
-      "aliases": ["Shopify Inc."],
+      "aliases": [
+        "Shopify Inc."
+      ],
       "is_target": false,
       "is_customer": true,
       "tier": 2,
@@ -90,7 +111,9 @@
       "id": "person:michael-moritz",
       "type": "person",
       "name": "Michael Moritz",
-      "aliases": ["Sir Michael Moritz"],
+      "aliases": [
+        "Sir Michael Moritz"
+      ],
       "public_role": "Partner, Sequoia Capital (former)",
       "current_org_id": null,
       "is_connector": true,
@@ -101,7 +124,9 @@
       "id": "person:marc-andreessen",
       "type": "person",
       "name": "Marc Andreessen",
-      "aliases": ["pmarca"],
+      "aliases": [
+        "pmarca"
+      ],
       "public_role": "Co-founder and General Partner, Andreessen Horowitz",
       "current_org_id": "fund:andreessen-horowitz",
       "is_connector": true,
@@ -115,6 +140,44 @@
       "aliases": [],
       "public_role": "CEO, Instacart",
       "current_org_id": "company:instacart",
+      "is_connector": true,
+      "intro_budget_quarterly": 3,
+      "intros_used_this_quarter": 0
+    },
+    {
+      "id": "company:mongodb",
+      "type": "company",
+      "name": "MongoDB",
+      "aliases": [
+        "MongoDB, Inc.",
+        "10gen"
+      ],
+      "is_target": true,
+      "is_customer": false,
+      "tier": 1,
+      "industry": "Database software",
+      "employee_band": "5001-10000"
+    },
+    {
+      "id": "company:uipath",
+      "type": "company",
+      "name": "UiPath",
+      "aliases": [
+        "UiPath Inc."
+      ],
+      "is_target": true,
+      "is_customer": false,
+      "tier": 1,
+      "industry": "Enterprise automation",
+      "employee_band": "1001-5000"
+    },
+    {
+      "id": "person:dev-ittycheria",
+      "type": "person",
+      "name": "Dev Ittycheria",
+      "aliases": [],
+      "public_role": "President and CEO, MongoDB",
+      "current_org_id": "company:mongodb",
       "is_connector": true,
       "intro_budget_quarterly": 3,
       "intros_used_this_quarter": 0
@@ -300,6 +363,42 @@
       "source_accessed": "2026-08-12",
       "confidence": "medium",
       "notes": "Both companies are Y Combinator alumni per YC's public company directory."
+    },
+    {
+      "id": "edge:sequoia-mongodb-portfolio",
+      "from": "fund:sequoia-capital",
+      "to": "company:mongodb",
+      "type": "investor_portfolio",
+      "start_date": "2013-10",
+      "end_date": null,
+      "source_url": "https://www.sequoiacap.com/companies/mongodb/",
+      "source_accessed": "2026-08-12",
+      "confidence": "high",
+      "notes": "MongoDB listed on Sequoia Capital's public portfolio page. NYC-headquartered enterprise account."
+    },
+    {
+      "id": "edge:sequoia-uipath-portfolio",
+      "from": "fund:sequoia-capital",
+      "to": "company:uipath",
+      "type": "investor_portfolio",
+      "start_date": "2018-03",
+      "end_date": null,
+      "source_url": "https://www.sequoiacap.com/companies/uipath/",
+      "source_accessed": "2026-08-12",
+      "confidence": "high",
+      "notes": "UiPath listed on Sequoia Capital's public portfolio page. NYC-headquartered enterprise account."
+    },
+    {
+      "id": "edge:ittycheria-mongodb-ceo",
+      "from": "person:dev-ittycheria",
+      "to": "company:mongodb",
+      "type": "exec_employment",
+      "start_date": "2014-09",
+      "end_date": null,
+      "source_url": "https://en.wikipedia.org/wiki/Dev_Ittycheria",
+      "source_accessed": "2026-08-12",
+      "confidence": "high",
+      "notes": "President and CEO of MongoDB since 2014."
     }
   ]
 }

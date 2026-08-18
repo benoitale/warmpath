@@ -1,6 +1,7 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import type { EdgeType, Graph, Node } from '../../schema'
 import { buildWeb, WEB_HEIGHT, WEB_WIDTH } from './buildWeb'
+import { formatEdgePeriod, summarizeNode } from './summarizeNode'
 
 export type GraphViewProps = {
   graph: Graph
@@ -33,9 +34,20 @@ const NODE_COLORS: Record<Node['type'], string> = {
 
 export function GraphView({ graph, focusCompanyId }: GraphViewProps) {
   const web = useMemo(() => buildWeb(graph, focusCompanyId), [graph, focusCompanyId])
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null)
+  const [prevFocusCompanyId, setPrevFocusCompanyId] = useState(focusCompanyId)
+  if (prevFocusCompanyId !== focusCompanyId) {
+    setPrevFocusCompanyId(focusCompanyId)
+    setSelectedNodeId(null)
+  }
+
   const usedEdgeTypes = useMemo(
     () => new Set(web.edges.map((webEdge) => webEdge.edge.type)),
     [web],
+  )
+  const summary = useMemo(
+    () => (selectedNodeId !== null ? summarizeNode(graph, selectedNodeId) : null),
+    [graph, selectedNodeId],
   )
 
   if (web.nodes.length === 0) {
@@ -60,7 +72,11 @@ export function GraphView({ graph, focusCompanyId }: GraphViewProps) {
               stroke={EDGE_COLORS[edge.type]}
               strokeWidth={edge.confidence === 'high' ? 2 : 1}
               strokeDasharray={edge.end_date !== null ? '4 3' : undefined}
-              opacity={0.75}
+              opacity={
+                selectedNodeId === null || edge.from === selectedNodeId || edge.to === selectedNodeId
+                  ? 0.75
+                  : 0.2
+              }
             >
               <title>
                 {EDGE_LABELS[edge.type]}: {edge.notes}
@@ -69,14 +85,20 @@ export function GraphView({ graph, focusCompanyId }: GraphViewProps) {
           </g>
         ))}
         {web.nodes.map(({ node, x, y, depth }) => (
-          <g key={node.id}>
+          <g
+            key={node.id}
+            onClick={() => setSelectedNodeId(node.id === selectedNodeId ? null : node.id)}
+            className="cursor-pointer"
+            role="button"
+            aria-label={`Show connections of ${node.name}`}
+          >
             <circle
               cx={x}
               cy={y}
               r={depth === 0 ? 14 : 9}
               fill={NODE_COLORS[node.type]}
-              stroke={depth === 0 ? '#111827' : '#ffffff'}
-              strokeWidth={depth === 0 ? 3 : 1.5}
+              stroke={node.id === selectedNodeId ? '#dc2626' : depth === 0 ? '#111827' : '#ffffff'}
+              strokeWidth={node.id === selectedNodeId ? 3.5 : depth === 0 ? 3 : 1.5}
             >
               <title>
                 {node.name} ({node.type})
@@ -108,6 +130,61 @@ export function GraphView({ graph, focusCompanyId }: GraphViewProps) {
           Dashed line: relationship ended
         </span>
       </div>
+      {summary !== null && (
+        <div className="mt-3 rounded border border-gray-200 bg-gray-50 p-4">
+          <div className="flex items-start justify-between">
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900">{summary.node.name}</h3>
+              <p className="text-xs text-gray-600">
+                {summary.node.type === 'person'
+                  ? summary.node.public_role
+                  : summary.node.type === 'company'
+                    ? `${summary.node.industry} · ${summary.node.employee_band} employees`
+                    : 'Investment fund'}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setSelectedNodeId(null)}
+              className="text-xs text-gray-500 hover:text-gray-900"
+            >
+              Close
+            </button>
+          </div>
+          {summary.connections.length === 0 ? (
+            <p className="mt-2 text-sm text-gray-500">No recorded connections.</p>
+          ) : (
+            <ul className="mt-2 space-y-2">
+              {summary.connections.map(({ edge, otherNode }) => (
+                <li key={edge.id} className="text-sm">
+                  <span
+                    className="mr-2 inline-block rounded px-1.5 py-0.5 text-xs text-white"
+                    style={{ backgroundColor: EDGE_COLORS[edge.type] }}
+                  >
+                    {EDGE_LABELS[edge.type]}
+                  </span>
+                  <span className="font-medium">{otherNode.name}</span>
+                  {formatEdgePeriod(edge) !== '' && (
+                    <span className="ml-2 text-xs text-gray-500">{formatEdgePeriod(edge)}</span>
+                  )}
+                  <span className="ml-2 text-xs text-gray-500">confidence: {edge.confidence}</span>
+                  <p className="ml-0 text-xs text-gray-600">
+                    {edge.notes}{' '}
+                    <a
+                      href={edge.source_url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-blue-600 underline"
+                    >
+                      source
+                    </a>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   )
 }
