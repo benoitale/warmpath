@@ -64,6 +64,6 @@ describe('AccountPath storage', () => {
   })
 
   it('serializes a graph as formatted JSON', () => {
-    expect(serializeGraph(seedGraph)).toBe('{\n  "nodes": [],\n  "edges": []\n}')
+    expect(serializeGraph({ nodes: [], edges: [] })).toBe('{\n  "nodes": [],\n  "edges": []\n}')
   })
 })
