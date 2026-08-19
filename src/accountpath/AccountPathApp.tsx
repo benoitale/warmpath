@@ -31,14 +31,7 @@ export function AccountPathApp() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          element={
-            <AccountPathLayout
-              accountDetailId={graph.nodes.find((node) => node.isTargetAccount === true)?.id}
-            />
-          }
-          path="/"
-        >
+        <Route element={<AccountPathLayout />} path="/">
           <Route element={<AccountsPage graph={graph} now={ACCOUNT_PATH_NOW} />} index />
           <Route element={<AccountDetailPage graph={graph} now={ACCOUNT_PATH_NOW} />} path="account/:id" />
           <Route element={<GraphPage graph={graph} />} path="graph" />

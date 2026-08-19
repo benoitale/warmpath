@@ -172,7 +172,7 @@ export function AccountsPage({ graph, now }: AccountsPageProps) {
                   ['account', 'Account'],
                   ['segment', 'Segment'],
                   ['status', 'Status'],
-                  ['hops', 'Best path hops'],
+                  ['hops', 'Best path length'],
                   ['connector', 'Connector'],
                   ['confidence', 'Confidence'],
                 ] as const

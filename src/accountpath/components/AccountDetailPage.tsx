@@ -55,24 +55,27 @@ function EdgeLabel({ step }: { step: PathStep }) {
 function PathStrip({ path }: { path: Path }) {
   return (
     <div className="flex min-w-max items-center gap-3 overflow-x-auto rounded-xl border border-slate-200 bg-white p-4">
-      {path.nodes.map((node, index) => (
-        <span className="flex items-center gap-3" key={`${node.id}-${index}`}>
-          <span className="rounded-lg bg-slate-900 px-3 py-2 text-sm font-medium text-white">
-            {node.name}
+      {path.nodes.map((node, index) => {
+        const step = path.steps[index]
+        return (
+          <span className="flex items-center gap-3" key={`${node.id}-${index}`}>
+            <span className="rounded-lg bg-slate-900 px-3 py-2 text-sm font-medium text-white">
+              {node.name}
+            </span>
+            {step !== undefined && (
+              <>
+                <span aria-hidden="true" className="text-slate-400">
+                  →
+                </span>
+                <EdgeLabel step={step} />
+                <span aria-hidden="true" className="text-slate-400">
+                  →
+                </span>
+              </>
+            )}
           </span>
-          {path.steps[index] !== undefined && (
-            <>
-              <span aria-hidden="true" className="text-slate-400">
-                →
-              </span>
-              <EdgeLabel step={path.steps[index] as PathStep} />
-              <span aria-hidden="true" className="text-slate-400">
-                →
-              </span>
-            </>
-          )}
-        </span>
-      ))}
+        )
+      })}
     </div>
   )
 }
@@ -143,7 +146,8 @@ export function AccountDetailPage({ graph, now }: AccountDetailPageProps) {
           remainingPaths.map((path, index) => (
             <details className="rounded-xl border border-slate-200 bg-white p-4" key={path.steps.map((step) => step.edge.id).join('|')}>
               <summary className="cursor-pointer text-sm font-medium">
-                Path {index + 2}: {path.hops} hops · score {path.score.toFixed(2)} ·{' '}
+                Path {index + 2}: {path.hops} {path.hops === 1 ? 'hop' : 'hops'} · score{' '}
+                {path.score.toFixed(2)} ·{' '}
                 {path.allVerified ? 'verified' : 'inferred'}
               </summary>
               <div className="mt-4">

@@ -1,19 +1,12 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
-type AccountPathLayoutProps = {
-  accountDetailId?: string
-}
+const links = [
+  { to: '/', label: 'Accounts' },
+  { to: '/graph', label: 'Graph' },
+  { to: '/edit', label: 'Edit' },
+]
 
-export function AccountPathLayout({ accountDetailId }: AccountPathLayoutProps) {
-  const links = [
-    { to: '/', label: 'Accounts' },
-    ...(accountDetailId === undefined
-      ? []
-      : [{ to: `/account/${accountDetailId}`, label: 'Detail' }]),
-    { to: '/graph', label: 'Graph' },
-    { to: '/edit', label: 'Edit' },
-  ]
-
+export function AccountPathLayout() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <header className="border-b border-slate-200 bg-white">
