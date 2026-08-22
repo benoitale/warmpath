@@ -1,0 +1,46 @@
+{
+  "head": {
+    "vars": [
+      "person",
+      "personLabel",
+      "start",
+      "end"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "person": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q6766283"
+        },
+        "personLabel": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Marc Rowan"
+        },
+        "start": {
+          "type": "literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "value": "2021-01-01T00:00:00Z"
+        }
+      },
+      {
+        "person": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q14945681"
+        },
+        "personLabel": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Gary Cohn"
+        },
+        "start": {
+          "type": "literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "value": "2023-01-01T00:00:00Z"
+        }
+      }
+    ]
+  }
+}
