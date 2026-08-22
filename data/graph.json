@@ -1,404 +1,530 @@
 {
-  "version": "0.1.0",
-  "generated_at": "2026-08-12T17:30:00Z",
+  "version": "0.2.0",
+  "generated_at": "2026-08-22T01:00:00Z",
   "nodes": [
     {
-      "id": "fund:sequoia-capital",
-      "type": "fund",
-      "name": "Sequoia Capital",
-      "aliases": [
-        "Sequoia"
-      ]
-    },
-    {
-      "id": "fund:andreessen-horowitz",
-      "type": "fund",
-      "name": "Andreessen Horowitz",
-      "aliases": [
-        "a16z",
-        "AH Capital Management"
-      ]
-    },
-    {
-      "id": "company:stripe",
+      "id": "company:cognition",
       "type": "company",
-      "name": "Stripe",
+      "name": "Cognition",
       "aliases": [
-        "Stripe, Inc."
-      ],
-      "is_target": true,
-      "is_customer": false,
-      "tier": 1,
-      "industry": "Financial infrastructure",
-      "employee_band": "5001-10000"
-    },
-    {
-      "id": "company:airbnb",
-      "type": "company",
-      "name": "Airbnb",
-      "aliases": [
-        "Airbnb, Inc."
-      ],
-      "is_target": true,
-      "is_customer": false,
-      "tier": 1,
-      "industry": "Travel marketplace",
-      "employee_band": "5001-10000"
-    },
-    {
-      "id": "company:instacart",
-      "type": "company",
-      "name": "Instacart",
-      "aliases": [
-        "Maplebear Inc."
+        "Cognition AI",
+        "Cognition Labs",
+        "Devin"
       ],
       "is_target": false,
-      "is_customer": true,
-      "tier": 2,
-      "industry": "Grocery delivery",
+      "is_customer": false,
+      "tier": 1,
+      "industry": "AI software engineering",
+      "employee_band": "201-500"
+    },
+    {
+      "id": "company:sei-investments",
+      "type": "company",
+      "name": "SEI Investments",
+      "aliases": [
+        "SEI Investments Company",
+        "SEIC"
+      ],
+      "is_target": true,
+      "is_customer": false,
+      "tier": 1,
+      "industry": "Asset management technology",
+      "employee_band": "5001-10000"
+    },
+    {
+      "id": "company:apollo-global",
+      "type": "company",
+      "name": "Apollo Global Management",
+      "aliases": [
+        "Apollo",
+        "APO"
+      ],
+      "is_target": true,
+      "is_customer": false,
+      "tier": 1,
+      "industry": "Alternative asset management",
+      "employee_band": "5001-10000"
+    },
+    {
+      "id": "company:cantor-fitzgerald",
+      "type": "company",
+      "name": "Cantor Fitzgerald",
+      "aliases": [
+        "Cantor Fitzgerald, L.P.",
+        "Cantor"
+      ],
+      "is_target": true,
+      "is_customer": false,
+      "tier": 1,
+      "industry": "Investment banking",
+      "employee_band": "5001-10000"
+    },
+    {
+      "id": "company:oppenheimer-holdings",
+      "type": "company",
+      "name": "Oppenheimer Holdings",
+      "aliases": [
+        "Oppenheimer",
+        "OPY",
+        "Oppenheimer & Co."
+      ],
+      "is_target": true,
+      "is_customer": false,
+      "tier": 1,
+      "industry": "Investment banking",
       "employee_band": "1001-5000"
     },
     {
-      "id": "company:meta",
+      "id": "company:bgc-group",
       "type": "company",
-      "name": "Meta",
+      "name": "BGC Group",
       "aliases": [
-        "Meta Platforms",
-        "Facebook"
+        "BGC",
+        "BGC Partners"
       ],
-      "is_target": true,
+      "is_target": false,
       "is_customer": false,
-      "tier": 1,
-      "industry": "Social media",
-      "employee_band": "10000+"
+      "tier": 2,
+      "industry": "Financial brokerage and fintech",
+      "employee_band": "5001-10000"
     },
     {
-      "id": "company:shopify",
+      "id": "company:goldman-sachs",
       "type": "company",
-      "name": "Shopify",
+      "name": "Goldman Sachs",
       "aliases": [
-        "Shopify Inc."
+        "The Goldman Sachs Group, Inc.",
+        "GS"
       ],
       "is_target": false,
       "is_customer": true,
-      "tier": 2,
-      "industry": "E-commerce platform",
+      "tier": 1,
+      "industry": "Investment banking",
       "employee_band": "10000+"
     },
     {
-      "id": "person:patrick-collison",
+      "id": "company:citi",
+      "type": "company",
+      "name": "Citi",
+      "aliases": [
+        "Citigroup",
+        "Citibank"
+      ],
+      "is_target": false,
+      "is_customer": true,
+      "tier": 1,
+      "industry": "Banking",
+      "employee_band": "10000+"
+    },
+    {
+      "id": "company:santander",
+      "type": "company",
+      "name": "Santander",
+      "aliases": [
+        "Banco Santander"
+      ],
+      "is_target": false,
+      "is_customer": true,
+      "tier": 1,
+      "industry": "Banking",
+      "employee_band": "10000+"
+    },
+    {
+      "id": "fund:founders-fund",
+      "type": "fund",
+      "name": "Founders Fund",
+      "aliases": [
+        "Peter Thiel's Founders Fund"
+      ]
+    },
+    {
+      "id": "fund:8vc",
+      "type": "fund",
+      "name": "8VC",
+      "aliases": [
+        "EightVC"
+      ]
+    },
+    {
+      "id": "fund:lux-capital",
+      "type": "fund",
+      "name": "Lux Capital",
+      "aliases": []
+    },
+    {
+      "id": "fund:general-catalyst",
+      "type": "fund",
+      "name": "General Catalyst",
+      "aliases": []
+    },
+    {
+      "id": "fund:bain-capital-ventures",
+      "type": "fund",
+      "name": "Bain Capital Ventures",
+      "aliases": [
+        "BCV"
+      ]
+    },
+    {
+      "id": "fund:ribbbit-capital",
+      "type": "fund",
+      "name": "Ribbit Capital",
+      "aliases": [
+        "Ribbit"
+      ]
+    },
+    {
+      "id": "person:scott-wu",
       "type": "person",
-      "name": "Patrick Collison",
+      "name": "Scott Wu",
       "aliases": [],
-      "public_role": "Co-founder and CEO, Stripe",
-      "current_org_id": "company:stripe",
+      "public_role": "Co-founder and CEO, Cognition",
+      "current_org_id": "company:cognition",
       "is_connector": true,
-      "intro_budget_quarterly": 4,
+      "intro_budget_quarterly": 6,
       "intros_used_this_quarter": 1
     },
     {
-      "id": "person:brian-chesky",
+      "id": "person:steven-hao",
       "type": "person",
-      "name": "Brian Chesky",
+      "name": "Steven Hao",
       "aliases": [],
-      "public_role": "Co-founder and CEO, Airbnb",
-      "current_org_id": "company:airbnb",
+      "public_role": "Co-founder and CTO, Cognition",
+      "current_org_id": "company:cognition",
+      "is_connector": true,
+      "intro_budget_quarterly": 4,
+      "intros_used_this_quarter": 0
+    },
+    {
+      "id": "person:walden-yan",
+      "type": "person",
+      "name": "Walden Yan",
+      "aliases": [],
+      "public_role": "Co-founder and CPO, Cognition",
+      "current_org_id": "company:cognition",
+      "is_connector": true,
+      "intro_budget_quarterly": 4,
+      "intros_used_this_quarter": 0
+    },
+    {
+      "id": "person:ryan-hicke",
+      "type": "person",
+      "name": "Ryan Hicke",
+      "aliases": [],
+      "public_role": "Chief Executive Officer, SEI Investments (former CIO)",
+      "current_org_id": "company:sei-investments",
       "is_connector": false,
-      "intro_budget_quarterly": 2,
+      "intro_budget_quarterly": 0,
       "intros_used_this_quarter": 0
     },
     {
-      "id": "person:michael-moritz",
+      "id": "person:marc-rowan",
       "type": "person",
-      "name": "Michael Moritz",
-      "aliases": [
-        "Sir Michael Moritz"
-      ],
-      "public_role": "Partner, Sequoia Capital (former)",
-      "current_org_id": null,
-      "is_connector": true,
-      "intro_budget_quarterly": 6,
-      "intros_used_this_quarter": 3
-    },
-    {
-      "id": "person:marc-andreessen",
-      "type": "person",
-      "name": "Marc Andreessen",
-      "aliases": [
-        "pmarca"
-      ],
-      "public_role": "Co-founder and General Partner, Andreessen Horowitz",
-      "current_org_id": "fund:andreessen-horowitz",
-      "is_connector": true,
-      "intro_budget_quarterly": 5,
-      "intros_used_this_quarter": 2
-    },
-    {
-      "id": "person:fidji-simo",
-      "type": "person",
-      "name": "Fidji Simo",
+      "name": "Marc Rowan",
       "aliases": [],
-      "public_role": "CEO, Instacart",
-      "current_org_id": "company:instacart",
-      "is_connector": true,
-      "intro_budget_quarterly": 3,
+      "public_role": "Co-founder, CEO and Chair, Apollo Global Management",
+      "current_org_id": "company:apollo-global",
+      "is_connector": false,
+      "intro_budget_quarterly": 0,
       "intros_used_this_quarter": 0
     },
     {
-      "id": "company:mongodb",
-      "type": "company",
-      "name": "MongoDB",
-      "aliases": [
-        "MongoDB, Inc.",
-        "10gen"
-      ],
-      "is_target": true,
-      "is_customer": false,
-      "tier": 1,
-      "industry": "Database software",
-      "employee_band": "5001-10000"
-    },
-    {
-      "id": "company:uipath",
-      "type": "company",
-      "name": "UiPath",
-      "aliases": [
-        "UiPath Inc."
-      ],
-      "is_target": true,
-      "is_customer": false,
-      "tier": 1,
-      "industry": "Enterprise automation",
-      "employee_band": "1001-5000"
-    },
-    {
-      "id": "person:dev-ittycheria",
+      "id": "person:gary-cohn",
       "type": "person",
-      "name": "Dev Ittycheria",
+      "name": "Gary Cohn",
       "aliases": [],
-      "public_role": "President and CEO, MongoDB",
-      "current_org_id": "company:mongodb",
-      "is_connector": true,
-      "intro_budget_quarterly": 3,
+      "public_role": "Lead Independent Director, Apollo Global Management; former President & COO, Goldman Sachs",
+      "current_org_id": "company:apollo-global",
+      "is_connector": false,
+      "intro_budget_quarterly": 0,
+      "intros_used_this_quarter": 0
+    },
+    {
+      "id": "person:james-zelter",
+      "type": "person",
+      "name": "James Zelter",
+      "aliases": [],
+      "public_role": "President and Director, Apollo Global Management",
+      "current_org_id": "company:apollo-global",
+      "is_connector": false,
+      "intro_budget_quarterly": 0,
+      "intros_used_this_quarter": 0
+    },
+    {
+      "id": "person:robert-lowenthal",
+      "type": "person",
+      "name": "Robert S. Lowenthal",
+      "aliases": [],
+      "public_role": "Chairman and CEO, Oppenheimer Holdings",
+      "current_org_id": "company:oppenheimer-holdings",
+      "is_connector": false,
+      "intro_budget_quarterly": 0,
+      "intros_used_this_quarter": 0
+    },
+    {
+      "id": "person:brandon-lutnick",
+      "type": "person",
+      "name": "Brandon Lutnick",
+      "aliases": [],
+      "public_role": "Chairman and CEO, Cantor Fitzgerald, L.P.; Director, BGC Group",
+      "current_org_id": "company:cantor-fitzgerald",
+      "is_connector": false,
+      "intro_budget_quarterly": 0,
       "intros_used_this_quarter": 0
     }
   ],
   "edges": [
     {
-      "id": "edge:sequoia-stripe-portfolio",
-      "from": "fund:sequoia-capital",
-      "to": "company:stripe",
-      "type": "investor_portfolio",
-      "start_date": "2011-03",
-      "end_date": null,
-      "source_url": "https://www.sequoiacap.com/companies/stripe/",
-      "source_accessed": "2026-08-12",
-      "confidence": "high",
-      "notes": "Stripe listed on Sequoia Capital's public portfolio page."
-    },
-    {
-      "id": "edge:sequoia-airbnb-portfolio",
-      "from": "fund:sequoia-capital",
-      "to": "company:airbnb",
-      "type": "investor_portfolio",
-      "start_date": "2009-04",
-      "end_date": null,
-      "source_url": "https://www.sequoiacap.com/companies/airbnb/",
-      "source_accessed": "2026-08-12",
-      "confidence": "high",
-      "notes": "Airbnb listed on Sequoia Capital's public portfolio page."
-    },
-    {
-      "id": "edge:sequoia-instacart-portfolio",
-      "from": "fund:sequoia-capital",
-      "to": "company:instacart",
-      "type": "investor_portfolio",
-      "start_date": "2013-06",
-      "end_date": null,
-      "source_url": "https://www.sequoiacap.com/companies/instacart/",
-      "source_accessed": "2026-08-12",
-      "confidence": "high",
-      "notes": "Instacart listed on Sequoia Capital's public portfolio page."
-    },
-    {
-      "id": "edge:a16z-airbnb-portfolio",
-      "from": "fund:andreessen-horowitz",
-      "to": "company:airbnb",
-      "type": "investor_portfolio",
-      "start_date": "2011-07",
-      "end_date": null,
-      "source_url": "https://a16z.com/portfolio/",
-      "source_accessed": "2026-08-12",
-      "confidence": "high",
-      "notes": "Airbnb listed on the Andreessen Horowitz portfolio page; a16z led Airbnb's 2011 Series B."
-    },
-    {
-      "id": "edge:a16z-instacart-portfolio",
-      "from": "fund:andreessen-horowitz",
-      "to": "company:instacart",
-      "type": "investor_portfolio",
-      "start_date": "2014-06",
-      "end_date": null,
-      "source_url": "https://a16z.com/portfolio/",
-      "source_accessed": "2026-08-12",
-      "confidence": "high",
-      "notes": "Instacart listed on the Andreessen Horowitz portfolio page; a16z led the 2014 Series B."
-    },
-    {
-      "id": "edge:sequoia-a16z-coinvest-airbnb",
-      "from": "fund:sequoia-capital",
-      "to": "fund:andreessen-horowitz",
-      "type": "co_investor",
-      "start_date": "2011-07",
-      "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Airbnb",
-      "source_accessed": "2026-08-12",
-      "confidence": "medium",
-      "notes": "Both funds appear on Airbnb's cap table per Airbnb's funding history."
-    },
-    {
-      "id": "edge:sequoia-a16z-coinvest-instacart",
-      "from": "fund:sequoia-capital",
-      "to": "fund:andreessen-horowitz",
-      "type": "co_investor",
-      "start_date": "2014-06",
-      "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Instacart",
-      "source_accessed": "2026-08-12",
-      "confidence": "medium",
-      "notes": "Both funds appear on Instacart's cap table per Instacart's funding history."
-    },
-    {
-      "id": "edge:moritz-stripe-board",
-      "from": "person:michael-moritz",
-      "to": "company:stripe",
-      "type": "board_seat",
-      "start_date": "2011-03",
-      "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Michael_Moritz",
-      "source_accessed": "2026-08-12",
-      "confidence": "medium",
-      "notes": "Moritz joined Stripe's board after leading Sequoia's investment."
-    },
-    {
-      "id": "edge:andreessen-meta-board",
-      "from": "person:marc-andreessen",
-      "to": "company:meta",
-      "type": "board_seat",
-      "start_date": "2008-06",
-      "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Marc_Andreessen",
-      "source_accessed": "2026-08-12",
-      "confidence": "high",
-      "notes": "Andreessen has served on the Meta (Facebook) board since 2008."
-    },
-    {
-      "id": "edge:simo-shopify-board",
-      "from": "person:fidji-simo",
-      "to": "company:shopify",
-      "type": "board_seat",
-      "start_date": "2021-02",
-      "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Fidji_Simo",
-      "source_accessed": "2026-08-12",
-      "confidence": "medium",
-      "notes": "Simo joined Shopify's board of directors in 2021."
-    },
-    {
-      "id": "edge:collison-stripe-ceo",
-      "from": "person:patrick-collison",
-      "to": "company:stripe",
+      "id": "edge:wu-cognition-ceo",
+      "from": "person:scott-wu",
+      "to": "company:cognition",
       "type": "exec_employment",
-      "start_date": "2010-01",
+      "start_date": "2023-11",
       "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Patrick_Collison",
-      "source_accessed": "2026-08-12",
+      "source_url": "https://en.wikipedia.org/wiki/Cognition_AI",
+      "source_accessed": "2026-08-22",
       "confidence": "high",
-      "notes": "Co-founded Stripe in 2010 and serves as CEO."
+      "notes": "Wikipedia lists Scott Wu as co-founder and CEO of Cognition AI."
     },
     {
-      "id": "edge:chesky-airbnb-ceo",
-      "from": "person:brian-chesky",
-      "to": "company:airbnb",
+      "id": "edge:hao-cognition-cto",
+      "from": "person:steven-hao",
+      "to": "company:cognition",
       "type": "exec_employment",
-      "start_date": "2008-08",
+      "start_date": "2023-11",
       "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Brian_Chesky",
-      "source_accessed": "2026-08-12",
+      "source_url": "https://en.wikipedia.org/wiki/Cognition_AI",
+      "source_accessed": "2026-08-22",
       "confidence": "high",
-      "notes": "Co-founded Airbnb in 2008 and serves as CEO."
+      "notes": "Wikipedia lists Steven Hao as co-founder and CTO of Cognition AI."
     },
     {
-      "id": "edge:simo-meta-exec",
-      "from": "person:fidji-simo",
-      "to": "company:meta",
+      "id": "edge:yan-cognition-cpo",
+      "from": "person:walden-yan",
+      "to": "company:cognition",
       "type": "exec_employment",
-      "start_date": "2011-01",
-      "end_date": "2021-07",
-      "source_url": "https://en.wikipedia.org/wiki/Fidji_Simo",
-      "source_accessed": "2026-08-12",
+      "start_date": "2023-11",
+      "end_date": null,
+      "source_url": "https://en.wikipedia.org/wiki/Cognition_AI",
+      "source_accessed": "2026-08-22",
       "confidence": "high",
-      "notes": "Led the Facebook app at Meta before leaving in 2021 to run Instacart."
+      "notes": "Wikipedia lists Walden Yan as co-founder and CPO of Cognition AI."
     },
     {
-      "id": "edge:instacart-stripe-customer",
-      "from": "company:instacart",
-      "to": "company:stripe",
+      "id": "edge:founders-fund-cognition",
+      "from": "fund:founders-fund",
+      "to": "company:cognition",
+      "type": "investor_portfolio",
+      "start_date": "2024-01",
+      "end_date": null,
+      "source_url": "https://cognition.ai/about",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Founders Fund named as Cognition investor on cognition.ai/about."
+    },
+    {
+      "id": "edge:lux-cognition",
+      "from": "fund:lux-capital",
+      "to": "company:cognition",
+      "type": "investor_portfolio",
+      "start_date": "2024-01",
+      "end_date": null,
+      "source_url": "https://cognition.ai/about",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Lux Capital named as Cognition investor on cognition.ai/about."
+    },
+    {
+      "id": "edge:8vc-cognition",
+      "from": "fund:8vc",
+      "to": "company:cognition",
+      "type": "investor_portfolio",
+      "start_date": "2025-03",
+      "end_date": null,
+      "source_url": "https://cognition.ai/blog/series-d",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "8VC named as Cognition investor on cognition.ai/about and Series D post."
+    },
+    {
+      "id": "edge:bcv-cognition",
+      "from": "fund:bain-capital-ventures",
+      "to": "company:cognition",
+      "type": "investor_portfolio",
+      "start_date": "2024-01",
+      "end_date": null,
+      "source_url": "https://cognition.ai/about",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Bain Capital Ventures named as Cognition investor on cognition.ai/about."
+    },
+    {
+      "id": "edge:gc-cognition",
+      "from": "fund:general-catalyst",
+      "to": "company:cognition",
+      "type": "investor_portfolio",
+      "start_date": "2026-05",
+      "end_date": null,
+      "source_url": "https://cognition.ai/blog/series-d",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "General Catalyst named as Series D co-lead on cognition.ai/blog/series-d."
+    },
+    {
+      "id": "edge:ribbbit-cognition",
+      "from": "fund:ribbbit-capital",
+      "to": "company:cognition",
+      "type": "investor_portfolio",
+      "start_date": "2026-05",
+      "end_date": null,
+      "source_url": "https://cognition.ai/blog/series-d",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Ribbit Capital named as new Series D investor on cognition.ai/blog/series-d."
+    },
+    {
+      "id": "edge:goldman-cognition-customer",
+      "from": "company:goldman-sachs",
+      "to": "company:cognition",
       "type": "customer_reference",
       "start_date": null,
       "end_date": null,
-      "source_url": "https://stripe.com/customers",
-      "source_accessed": "2026-08-12",
-      "confidence": "medium",
-      "notes": "Instacart is a named customer on Stripe's public customers page."
+      "source_url": "https://cognition.ai/blog/series-d",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "company:goldman-sachs is named as a Cognition / Devin customer on the Series D announcement."
     },
     {
-      "id": "edge:stripe-airbnb-yc-cohort",
-      "from": "company:stripe",
-      "to": "company:airbnb",
-      "type": "cohort",
+      "id": "edge:citi-cognition-customer",
+      "from": "company:citi",
+      "to": "company:cognition",
+      "type": "customer_reference",
       "start_date": null,
       "end_date": null,
-      "source_url": "https://www.ycombinator.com/companies",
-      "source_accessed": "2026-08-12",
-      "confidence": "medium",
-      "notes": "Both companies are Y Combinator alumni per YC's public company directory."
-    },
-    {
-      "id": "edge:sequoia-mongodb-portfolio",
-      "from": "fund:sequoia-capital",
-      "to": "company:mongodb",
-      "type": "investor_portfolio",
-      "start_date": "2013-10",
-      "end_date": null,
-      "source_url": "https://www.sequoiacap.com/companies/mongodb/",
-      "source_accessed": "2026-08-12",
+      "source_url": "https://cognition.ai/blog/series-d",
+      "source_accessed": "2026-08-22",
       "confidence": "high",
-      "notes": "MongoDB listed on Sequoia Capital's public portfolio page. NYC-headquartered enterprise account."
+      "notes": "company:citi is named as a Cognition / Devin customer on the Series D announcement."
     },
     {
-      "id": "edge:sequoia-uipath-portfolio",
-      "from": "fund:sequoia-capital",
-      "to": "company:uipath",
-      "type": "investor_portfolio",
-      "start_date": "2018-03",
+      "id": "edge:santander-cognition-customer",
+      "from": "company:santander",
+      "to": "company:cognition",
+      "type": "customer_reference",
+      "start_date": null,
       "end_date": null,
-      "source_url": "https://www.sequoiacap.com/companies/uipath/",
-      "source_accessed": "2026-08-12",
+      "source_url": "https://cognition.ai/blog/series-d",
+      "source_accessed": "2026-08-22",
       "confidence": "high",
-      "notes": "UiPath listed on Sequoia Capital's public portfolio page. NYC-headquartered enterprise account."
+      "notes": "company:santander is named as a Cognition / Devin customer on the Series D announcement."
     },
     {
-      "id": "edge:ittycheria-mongodb-ceo",
-      "from": "person:dev-ittycheria",
-      "to": "company:mongodb",
+      "id": "edge:hicke-sei-ceo",
+      "from": "person:ryan-hicke",
+      "to": "company:sei-investments",
       "type": "exec_employment",
-      "start_date": "2014-09",
+      "start_date": "2022-06",
       "end_date": null,
-      "source_url": "https://en.wikipedia.org/wiki/Dev_Ittycheria",
-      "source_accessed": "2026-08-12",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/350894/000035089426000021/seic-20260414.htm",
+      "source_accessed": "2026-08-22",
       "confidence": "high",
-      "notes": "President and CEO of MongoDB since 2014."
+      "notes": "SEI 2026 DEF 14A describes Ryan Hicke as CEO and notes prior service as Chief Information Officer."
+    },
+    {
+      "id": "edge:rowan-apollo-ceo",
+      "from": "person:marc-rowan",
+      "to": "company:apollo-global",
+      "type": "exec_employment",
+      "start_date": "2021-01",
+      "end_date": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1858681/000119312526177321/d948913ddef14a.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Apollo 2026 DEF 14A lists Marc Rowan as Co-Founder, CEO and Chair of AGM."
+    },
+    {
+      "id": "edge:rowan-apollo-board",
+      "from": "person:marc-rowan",
+      "to": "company:apollo-global",
+      "type": "board_seat",
+      "start_date": "2021-01",
+      "end_date": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1858681/000119312526177321/d948913ddef14a.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Apollo 2026 DEF 14A lists Marc Rowan as Chair of the board of directors."
+    },
+    {
+      "id": "edge:cohn-apollo-board",
+      "from": "person:gary-cohn",
+      "to": "company:apollo-global",
+      "type": "board_seat",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1858681/000119312526177321/d948913ddef14a.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Apollo 2026 DEF 14A lists Gary Cohn as Lead Independent Director."
+    },
+    {
+      "id": "edge:zelter-apollo-president",
+      "from": "person:james-zelter",
+      "to": "company:apollo-global",
+      "type": "exec_employment",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1858681/000119312526177321/d948913ddef14a.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Apollo 2026 DEF 14A lists James Zelter as President and Director."
+    },
+    {
+      "id": "edge:cohn-goldman-exec",
+      "from": "person:gary-cohn",
+      "to": "company:goldman-sachs",
+      "type": "exec_employment",
+      "start_date": "2006-01",
+      "end_date": "2016-12",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1858681/000119312526177321/d948913ddef14a.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Apollo 2026 DEF 14A states Cohn was President and COO of Goldman Sachs from 2006 to 2016 (alumni bridge into Apollo)."
+    },
+    {
+      "id": "edge:lowenthal-opy-ceo",
+      "from": "person:robert-lowenthal",
+      "to": "company:oppenheimer-holdings",
+      "type": "exec_employment",
+      "start_date": "2025-05",
+      "end_date": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/791963/000110465926027365/tm261410-3_def14a.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "Oppenheimer 2026 DEF 14A covers Robert S. Lowenthal as director/executive leadership following the 2025 CEO transition."
+    },
+    {
+      "id": "edge:lutnick-cantor-ceo",
+      "from": "person:brandon-lutnick",
+      "to": "company:cantor-fitzgerald",
+      "type": "exec_employment",
+      "start_date": "2025-02",
+      "end_date": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1094831/000121390025093426/ea0258456-01.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "BGC Group 2025 DEF 14A states Brandon Lutnick is Chief Executive Officer and Chairman of Cantor Fitzgerald, L.P."
+    },
+    {
+      "id": "edge:lutnick-bgc-board",
+      "from": "person:brandon-lutnick",
+      "to": "company:bgc-group",
+      "type": "board_seat",
+      "start_date": "2025-02",
+      "end_date": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1094831/000121390025093426/ea0258456-01.htm",
+      "source_accessed": "2026-08-22",
+      "confidence": "high",
+      "notes": "BGC Group 2025 DEF 14A identifies Brandon Lutnick among directors/control persons tied to Cantor Fitzgerald."
     }
   ]
 }
